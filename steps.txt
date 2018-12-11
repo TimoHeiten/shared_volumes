@@ -1,0 +1,30 @@
+mkdir, 
+csproj,
+sln file,
+
+counter_model, 
+repository,
+controller,
+
+program
+startup file
+adddbcontext
+
+
+connection_string,
+database,
+dbcontext,
+context migrate,
+add all references
+
+container
+docker container run -d --rm -p 5555:5432 -e POSTGRES_USER=shared_volume_user -e POSTGRES_DB=shared_volume_db --name pg_shared_volume postgres:10;
+psql -d shared_volume_db -h localhost -U shared_volume_user -p 5555
+
+migration of database
+
+see also https://www.digitalocean.com/community/tutorials/how-to-share-data-between-docker-containers
+
+docker file
+
+volume for postgres file to share data

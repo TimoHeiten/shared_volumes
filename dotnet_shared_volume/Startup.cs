@@ -35,7 +35,7 @@ namespace dotnet_shared_volume
             string connection = Configuration["DbContextString"];
             services.AddScoped<IRepository, DbRepository>();
             services.AddDbContext<CounterContext>(options =>
-                options.UseNpgsql(connection));
+                options.UseNpgsql(connection, x => x.EnableRetryOnFailure()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

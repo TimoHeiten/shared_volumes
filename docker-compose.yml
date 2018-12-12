@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:10
+    environment:
+      - POSTGRES_USER=shared_volume_user
+      - POSTGRES_DB=shared_volume_user
+    ports:
+      - "5555:5432"
+    container_name: pg_shared
+  
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    ports:
+      - "5000:80"
+    container_name: api_shared

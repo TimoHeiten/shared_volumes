@@ -1,2 +1,4 @@
 steps.txt
 docker-compose.yml
+./bin
+./obj

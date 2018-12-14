@@ -10,7 +10,6 @@ RUN dotnet publish --no-restore -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app .
-ENTRYPOINT ["dotnet", "dotnet_shared_volume.csproj"]
 
-
+ENTRYPOINT ["dotnet", "dotnet_shared_volume.dll"]
 # on container run use --add-host=inDockerHost:172.17.0.1

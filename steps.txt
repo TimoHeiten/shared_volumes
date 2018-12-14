@@ -28,3 +28,13 @@ see also https://www.digitalocean.com/community/tutorials/how-to-share-data-betw
 docker file
 
 volume for postgres file to share data
+
+add 
+https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
+
+postgres run --volumes-from <api_container_name>
+
+
+demonstrate also with ubuntu docker image
+(much easier)
+
